@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="selectedAssetCellIdentifier" id="gTV-IL-0wX" customClass="PCSelectedAssetCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VFX-ei-Wmg">
+                        <rect key="frame" x="10" y="15" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="AwN-vk-Hsx"/>
+                            <constraint firstAttribute="width" constant="70" id="v8r-cD-Mej"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shO-r4-6DD">
+                        <rect key="frame" x="65" y="9" width="21" height="22"/>
+                        <state key="normal" image="icon_video_cancel.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ucT-Ia-3Sk"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehK-5j-hpt">
+                        <rect key="frame" x="10" y="64" width="21" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Z16-SZ-NGy"/>
+                            <constraint firstAttribute="width" constant="21" id="xHg-Kj-w0l"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="1">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_video_next.png" translatesAutoresizingMaskIntoConstraints="NO" id="gsd-Jd-42B">
+                        <rect key="frame" x="92" y="43" width="8" height="14"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="VFX-ei-Wmg" firstAttribute="top" secondItem="shO-r4-6DD" secondAttribute="top" constant="6" id="ChM-V6-mzH"/>
+                <constraint firstItem="VFX-ei-Wmg" firstAttribute="bottom" secondItem="ehK-5j-hpt" secondAttribute="bottom" id="TgV-Or-VOK"/>
+                <constraint firstAttribute="trailing" secondItem="gsd-Jd-42B" secondAttribute="trailing" id="USl-gj-C1b"/>
+                <constraint firstAttribute="centerY" secondItem="VFX-ei-Wmg" secondAttribute="centerY" id="hQz-Pq-dKb"/>
+                <constraint firstItem="VFX-ei-Wmg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="itF-jd-w5r"/>
+                <constraint firstItem="gsd-Jd-42B" firstAttribute="centerY" secondItem="VFX-ei-Wmg" secondAttribute="centerY" id="ptA-rq-eGQ"/>
+                <constraint firstItem="VFX-ei-Wmg" firstAttribute="trailing" secondItem="shO-r4-6DD" secondAttribute="trailing" constant="-6" id="qvu-Mn-0Tq"/>
+                <constraint firstItem="VFX-ei-Wmg" firstAttribute="leading" secondItem="ehK-5j-hpt" secondAttribute="leading" id="wsT-kt-qhw"/>
+            </constraints>
+            <connections>
+                <outlet property="deleteButton" destination="shO-r4-6DD" id="fQr-7L-RVs"/>
+                <outlet property="nextImageView" destination="gsd-Jd-42B" id="z7y-cq-CCv"/>
+                <outlet property="numberButton" destination="ehK-5j-hpt" id="OKp-Uv-Pma"/>
+                <outlet property="selectedImageView" destination="VFX-ei-Wmg" id="SJi-Mf-Q1o"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_video_cancel.png" width="21" height="21"/>
+        <image name="icon_video_next.png" width="8" height="14"/>
+    </resources>
+</document>
